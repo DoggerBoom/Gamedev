@@ -1,0 +1,27 @@
+# Godot 4+ recommended .gitignore
+
+# Editor cache
+.godot/
+
+# Archivos de importación generados automáticamente
+.import/
+*.import
+
+# Configuración del editor
+.editor_settings-*.tres
+
+# Exportaciones (pck, binarios, apps)
+*.pck
+*.exe
+*.apk
+*.zip
+*.app
+*.xcodeproj
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignora exportaciones de Android si no las usas
+# /android/
