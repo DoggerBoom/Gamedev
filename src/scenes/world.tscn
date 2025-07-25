@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxn2iinc37np2"]
+[gd_scene load_steps=8 format=3 uid="uid://cxn2iinc37np2"]
 
-[ext_resource type="PackedScene" uid="uid://bc31i7ojhm766" path="res://src/scenes/character_body_3d.tscn" id="1_w561s"]
+[ext_resource type="PackedScene" uid="uid://bc31i7ojhm766" path="res://src/scenes/player.tscn" id="1_w561s"]
+[ext_resource type="PackedScene" uid="uid://cbi2fa64ikfd3" path="res://src/scenes/player_2d.tscn" id="2_p8qt8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktcc2"]
 
@@ -27,11 +28,14 @@ mesh = SubResource("BoxMesh_ktcc2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_tp5op")
 
+[node name="Player_2d" parent="." instance=ExtResource("2_p8qt8")]
+transform = Transform3D(1.56254, 0, 0, 0, 1.41559, 0, 0, 0, 1, 0, 1.01906, 0)
+
 [node name="Player" parent="." instance=ExtResource("1_w561s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.06407, 3.86136, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999967, 0.00374912, -0.00715846, 6.88976e-08, 0.885856, 0.463961, 0.0080808, -0.463946, 0.885827, 0.179464, 4.00097, 9.43591)
+transform = Transform3D(0.999967, 0.00374912, -0.00715846, -0.00297074, 0.994382, 0.105806, 0.00751492, -0.105781, 0.994361, 0.143094, 3.4173, 9.43312)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tvkxc")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbi2fa64ikfd3"]
+
+[ext_resource type="Script" uid="uid://cj1c00a2x6fcr" path="res://src/script/player_2d.gd" id="1_h71hc"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_wqm7h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_680ob"]
+size = Vector3(0.999146, 1.00726, 0.0724487)
+
+[node name="Player_2d" type="CharacterBody3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_h71hc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.549853, 0)
+mesh = SubResource("QuadMesh_wqm7h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000427246, 0.547007, -0.0224304)
+shape = SubResource("BoxShape3D_680ob")
